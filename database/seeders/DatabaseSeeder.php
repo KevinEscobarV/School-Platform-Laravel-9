@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
         Storage::deleteDirectory('images');
         Storage::makeDirectory('images');
 
+        Storage::deleteDirectory('asignaturas');
+        Storage::makeDirectory('asignaturas');
+
         Storage::deleteDirectory('images_entregas');
         Storage::makeDirectory('images_entregas');
 

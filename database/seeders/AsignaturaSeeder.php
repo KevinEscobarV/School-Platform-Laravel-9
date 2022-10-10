@@ -32,7 +32,6 @@ class AsignaturaSeeder extends Seeder
                         'nombre' => $asignatura,
                         'codigo' => Str::lower($asignatura . $curso->id . $curso->seccion),
                         'descripcion' => 'Asignatura de ' . $asignatura . ' para el curso de primaria',
-                        'banner_path' => 'https://picsum.photos/id/' . rand(1, 100) . '/600/400',
                         'profesor_id' => $profesor->id,
                     ]);
                 }
@@ -43,7 +42,6 @@ class AsignaturaSeeder extends Seeder
                         'nombre' => $asignatura,
                         'codigo' => Str::upper($asignatura . $curso->id . $curso->seccion),
                         'descripcion' => 'Asignatura de ' . $asignatura . ' para el curso de secundaria',
-                        'banner_path' => 'https://picsum.photos/id/' . rand(1, 100) . '/600/400',
                         'profesor_id' => $profesor->id,
                     ]);
                 }

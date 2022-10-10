@@ -31,6 +31,7 @@ Route::post('/entrega/images', [AsignaturasController::class, 'store_images'])->
 
 Route::get('/profesor/administracion', [ManagementController::class, 'index'])->name('profesor.index');
 Route::get('/profesor/administracion/{asignatura}', [ManagementController::class, 'asignatura'])->name('profesor.asignatura');
+Route::get('/profesor/administracion/{asignatura}/edit', [ManagementController::class, 'asignaturaEdit'])->name('profesor.asignatura.edit');
 Route::get('/profesor/administracion/{asignatura}/{tema}', [ManagementController::class, 'tema'])->name('profesor.asignatura.tema');
 
 

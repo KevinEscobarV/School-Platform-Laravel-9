@@ -98,7 +98,8 @@
                         @forelse ($temas as $tema)
                             <tr>
                                 <td class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400 truncate">
-                                    <a href="{{route('profesor.asignatura.tema', [$asignatura, $tema])}}" class="hover:text-indigo-600" title="{{ $tema->titulo }}">
+                                    <a href="{{route('profesor.asignatura.tema', [$asignatura, $tema])}}" class="hover:text-indigo-600 transform transition hover:scale-105 flex" title="{{ $tema->titulo }}">
+                                        <x-icon name="arrow-right" class="w-5 h-5 mr-2" />
                                         {{ $tema->titulo }}
                                     </a>
                                 </td>
@@ -137,7 +138,7 @@
         </div>
     </div>
 
-    <x-modal.card title="Editar Tema" blur max-width="4xl" wire:model.defer="open">
+    <x-modal.card title="Editar Tema" blur max-width="4xl" wire:model.defer="open" z-index="z-40">
         <div class="grid grid-cols-6 gap-4">
             <!-- Titulo -->
             <div class="col-span-6 sm:col-span-6">

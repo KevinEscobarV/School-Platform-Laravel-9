@@ -8,9 +8,12 @@
 
     <div class="px-4 mx-auto">
         <x-card title="Gestion de Asignatura" cardClasses="border">
+            <x-slot name="action">
+                <x-button href="{{ route('profesor.asignatura.edit', $asignatura) }}" icon="cog" rounded label="Modificar" />
+            </x-slot>
             <div class="text-4xl sm:text-6xl font-extrabold leading-none tracking-tight text-center drop-shadow-md">
                 <span class="bg-clip-text text-transparent bg-center bg-cover"
-                    style="background-image:url({{ $asignatura->banner_path }});">
+                    style="background-image:url({{ $asignatura->banner_url }});">
                     {{ $asignatura->nombre }}
                 </span>
             </div>

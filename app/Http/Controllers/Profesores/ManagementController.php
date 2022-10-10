@@ -20,6 +20,11 @@ class ManagementController extends Controller
         return view('profesores.asignaturas.show', compact('asignatura'));
     }
 
+    public function asignaturaEdit(Asignatura $asignatura)
+    {
+        return view('profesores.asignaturas.edit', compact('asignatura'));
+    }
+
     public function tema(Asignatura $asignatura,Tema $tema)
     {
         return view('profesores.asignaturas.tema', compact('asignatura', 'tema'));

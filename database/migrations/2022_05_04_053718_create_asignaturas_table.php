@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('codigo')->unique();
-            $table->string('descripcion')->nullable();
+            $table->text('descripcion')->nullable();
             $table->string('banner_path')->nullable();
             $table->foreignId('curso_id')->constrained('cursos')->onDelete('cascade');
             $table->unsignedBigInteger('profesor_id')->nullable();

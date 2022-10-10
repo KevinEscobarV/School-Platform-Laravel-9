@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Asignatura extends Model
 {
@@ -17,6 +18,18 @@ class Asignatura extends Model
         'curso_id',
         'profesor_id',
     ];
+
+    public function getBannerUrlAttribute()
+    {
+        return $this->banner_path
+                    ? Storage::url($this->banner_path)
+                    : $this->defaultBannerUrl();
+    }
+
+    protected function defaultBannerUrl()
+    {
+        return asset('img/default-banner.jpg');
+    }
 
     public function curso()
     {

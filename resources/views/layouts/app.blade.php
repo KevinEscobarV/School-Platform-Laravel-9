@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     @livewireStyles
-
     @wireUiScripts
-
+    
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="{{ asset('js/ckeditor.js') }}"></script>
@@ -40,9 +39,9 @@
 
 <body class="font-sans antialiased">
 
+    <x-dialog z-index="z-50" />
+    
     <x-notifications />
-
-    <x-dialog z-index="z-50" blur="sm" align="center" />
 
     <div class="flex h-screen bg-white bg-repeat" style="background-image:url('/img/fondo3.jpg'); background-size: 600px;">
 
@@ -86,7 +85,6 @@
     @stack('modals')
     @livewireScripts
     @stack('scripts')
-    @stack('edit-modal')
 
 </body>
 
