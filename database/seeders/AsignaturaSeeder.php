@@ -40,7 +40,7 @@ class AsignaturaSeeder extends Seeder
                 foreach ($secundaria as $asignatura) {
                     $curso->asignaturas()->create([
                         'nombre' => $asignatura,
-                        'codigo' => Str::upper($asignatura . $curso->id . $curso->seccion),
+                        'codigo' => Str::lower($asignatura . $curso->id . $curso->seccion),
                         'descripcion' => 'Asignatura de ' . $asignatura . ' para el curso de secundaria',
                         'profesor_id' => $profesor->id,
                     ]);

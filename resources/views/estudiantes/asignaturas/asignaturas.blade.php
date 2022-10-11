@@ -15,7 +15,7 @@
             @forelse ($asignaturas as $asignatura)
                 <div class="col-span-6 sm:col-span-3">
                     <div class="shadow-md rounded-lg  bg-cover bg-center"
-                        style="background-image:url({{ $asignatura->banner_path }});">
+                        style="background-image:url({{ $asignatura->banner_url }});">
                         <div class="p-4 flex flex-col items-start bg-gradient-to-r from-white/80 to-white rounded-lg ring-2 ring-gray-300">
                             <span
                                 class="inline-block py-1 px-2 rounded-md bg-green-100 text-green-900 text-sm font-normal tracking-widest uppercase">

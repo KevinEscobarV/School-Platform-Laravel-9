@@ -10,7 +10,7 @@
         <x-card title="Gestion de Asignatura" cardClasses="border">
             <div class="text-4xl sm:text-6xl font-extrabold leading-none tracking-tight text-center drop-shadow-md">
                 <span class="bg-clip-text text-transparent bg-center bg-cover"
-                    style="background-image:url({{ $asignatura->banner_path }});">
+                    style="background-image:url({{ $asignatura->banner_url }});">
                     {{ $asignatura->nombre }}
                 </span>
             </div>

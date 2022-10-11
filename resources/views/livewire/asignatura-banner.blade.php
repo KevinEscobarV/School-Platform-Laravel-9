@@ -122,8 +122,8 @@
 
         <x-slot name="footer">
             <div class="flex items-center gap-x-3 justify-end">
-                <x-button wire:click="cancel" label="Cancel" flat />
-                <x-button wire:click="save" label="Save" spinner="save" primary />
+                <x-button wire:click="cancel" label="Cancelar" flat />
+                <x-button wire:click="save" label="Guardar" spinner="save" primary />
             </div>
         </x-slot>
     </x-card>

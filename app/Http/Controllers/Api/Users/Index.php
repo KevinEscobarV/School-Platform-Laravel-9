@@ -19,6 +19,7 @@ class Index extends Controller
                 $request->search,
                 fn (Builder $query) => $query
                     ->where('name', 'like', "%{$request->search}%")
+                    ->orWhere('apellido', 'like', "%{$request->search}%")
                     ->orWhere('email', 'like', "%{$request->search}%")
             )
             ->when(
